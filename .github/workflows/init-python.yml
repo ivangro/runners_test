@@ -30,7 +30,6 @@ jobs:
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
-        working-directory: "src_node"
         with:
           node-version: ${{ matrix.node-version }}
       - name: Node server
