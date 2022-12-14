@@ -37,3 +37,6 @@ jobs:
         run: |
           npm ci
           node app.js &
+      - name: Django tests
+        run: |
+          pytest
