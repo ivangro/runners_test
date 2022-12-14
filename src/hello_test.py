@@ -14,3 +14,8 @@ class TestHello(unittest.TestCase):
         r = requests.get('http://localhost:3000')
         self.assertEqual(r.status_code, 200)
         self.assertEqual(r.content, b'Hello World!')
+    
+    def test_server_fail(self):
+        r = requests.get('http://localhost:3000')
+        self.assertEqual(r.status_code, 200)
+        self.assertEqual(r.content, b'Another text!')
