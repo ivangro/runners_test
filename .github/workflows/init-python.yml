@@ -35,4 +35,5 @@ jobs:
       - name: Node server
         working-directory: "src_node"
         run: |
+          npm ci
           node app.js &
