@@ -29,11 +29,12 @@ jobs:
           # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - name: Use Node.js ${{ matrix.node-version }}
+        working-directory: "src_node"
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm run build --if-present
-        working-directory: "src_node"
+      # - run: npm run build --if-present
+      #   working-directory: "src_node"
       - name: Node server
         working-directory: "src_node"
         run: |
